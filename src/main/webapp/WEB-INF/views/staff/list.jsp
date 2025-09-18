@@ -35,14 +35,14 @@
 			      </li>
 			      
 			      <li class="nav-item">
-			        <a class="nav-link text-dark" href="#">
+			        <a class="nav-link text-dark" href="/staff/leave?page=0">
 			          <i class="material-symbols-rounded opacity-5 fs-5" data-content="연차 현황">diversity_3</i>
 			          <span class="nav-link-text ms-1 text-sm">연차 현황</span>
 			        </a>
 			      </li>
 			      
 			      <li class="nav-item">
-			        <a class="nav-link text-dark" href="#">
+			        <a class="nav-link text-dark" href="/staff/quit?page=0">
 			          <i class="material-symbols-rounded opacity-5 fs-5" data-content="퇴사자 조회">diversity_3</i>
 			          <span class="nav-link-text ms-1 text-sm">퇴사자 조회</span>
 			        </a>
@@ -114,9 +114,9 @@
 		    					<th class="col-2">사원번호</th>
 		    					<th class="col-2">이름</th>
 		    					<th class="col-2">부서</th>
-		    					<th class="col-1">직위</th>
+		    					<th class="col-2">직위</th>
 		    					<th class="col-2">연락처</th>
-		    					<th class="col-3">상태</th>
+		    					<th class="col-2">상태</th>
 		    				</tr>
 		    			</thead>
 		    			<tbody>
