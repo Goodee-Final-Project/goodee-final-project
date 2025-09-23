@@ -8,7 +8,6 @@ const supportedList = document.getElementById("supportedList")
 const saveBtn = document.getElementById('saveStaffBtn')
 const deptBtn = document.querySelectorAll('.dept-btn')
 const searchInput = document.getElementById('searchInput')
-const shareStaffs = document.querySelectorAll('.shareStaff')
 
 new Sortable(selectedList, {
 	animation: 150,
@@ -34,14 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			.catch(error => console.log('Fetch Error!', error))
 		}
 	})
-	
-	if(shareStaffs) {
-		shareStaffs.forEach((tr) => {
-			tr.querySelector('.remove-saved').addEventListener('click', () => {
-					tr.remove()
-			})
-		})
-	}
 })
 
 addBtn.addEventListener('click', () => {
