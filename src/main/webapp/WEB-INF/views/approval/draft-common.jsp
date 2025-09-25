@@ -1,8 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<sec:authentication property="principal" var="staff"/>
 
 <table class="mt-5 text-center" style="width: 100%">
 	<tr class="hard-line" style="height: 100px;">
-		<td colspan="2" class="hard-line"><p class="d-flex justify-content-between" style="width: 200px; margin: 0 auto;"><span style="font-size: 48px; font-weight: 700;">기</span><span style="font-size: 48px; font-weight: 700;">안</span><span style="font-size: 48px; font-weight: 700;">서</span></p></td>
+		<td colspan="2" class="hard-line">
+			<p class="d-flex justify-content-between" style="width: 200px; margin: 0 auto;">
+				<span style="font-size: 48px; font-weight: 700;">기</span>
+				<span style="font-size: 48px; font-weight: 700;">안</span>
+				<span style="font-size: 48px; font-weight: 700;">서</span>
+			</p>
+		</td>
 		<td colspan="3">
 			<!-- 결재선 -->
 		</td>
