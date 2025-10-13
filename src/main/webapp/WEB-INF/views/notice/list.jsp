@@ -106,7 +106,10 @@
     	
     	<!-- 작성 버튼 -->
     	<div class="d-flex justify-content-end mt-3">
-    		<a href="/notice/write" class="btn bg-gradient-dark">작성</a>
+    		<div>
+				<a href="/notice/temp" class="btn bg-gradient-dark">임시보관함</a>    		
+	    		<a href="/notice/write" class="btn bg-gradient-dark">작성</a>
+    		</div>
     	</div>
     	
     </section>
