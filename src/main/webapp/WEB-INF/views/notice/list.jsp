@@ -100,13 +100,16 @@
     	
     	<!-- 공지 없음 -->
 		<c:if test="${ totalNotice eq 0 }">
-			<div class="alert alert-secondary text-center">검색된 결과가 없습니다.</div>
+			<div class="alert alert-secondary text-center no-search">검색된 결과가 없습니다.</div>
 		</c:if>    	
     	<!-- 공지 없음 -->
     	
     	<!-- 작성 버튼 -->
     	<div class="d-flex justify-content-end mt-3">
-    		<a href="/notice/write" class="btn bg-gradient-dark">작성</a>
+    		<div>
+				<a href="/notice/temp" class="btn bg-gradient-dark">임시보관함</a>    		
+	    		<a href="/notice/write" class="btn bg-gradient-dark">작성</a>
+    		</div>
     	</div>
     	
     </section>
