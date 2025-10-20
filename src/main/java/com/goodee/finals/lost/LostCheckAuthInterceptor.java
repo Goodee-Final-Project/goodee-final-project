@@ -14,24 +14,18 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class LostCheckAuthInterceptor implements HandlerInterceptor {
 
-	@Autowired
-	private LostRepository lostRepository;
-	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		boolean flag = false;
 
-		Long lostNum = Long.parseLong(request.getRequestURI().split("/")[2]);
-		int lostId = lostRepository.findById(lostNum).get().getStaffDTO().getStaffCode();
-		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		StaffDTO loginUser = (StaffDTO)auth.getPrincipal();
-		int loginId = loginUser.getStaffCode();
+		int loginDeptCode = loginUser.getDeptDTO().getDeptCode();
 		
-		if (lostId == loginId) {
+		if (loginDeptCode == 1002) {
 			flag = true;
 		} else {
-			request.setAttribute("resultMsg", "작성자만 접근가능합니다.");
+			request.setAttribute("resultMsg", "운영부서만 접근가능합니다.");
 			request.setAttribute("resultIcon", "warning");
 			request.setAttribute("resultUrl", "/lost");
 			request.getRequestDispatcher("/WEB-INF/views/common/result.jsp").forward(request, response);
